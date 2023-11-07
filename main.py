@@ -27,6 +27,13 @@ def test():
     else:
         assert 0
 
+    try:
+        a.isSecond = 2
+    except AttributeError:
+        pass
+    else:
+        assert 0
+
 
 if __name__ == '__main__':
     test()

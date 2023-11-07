@@ -24,6 +24,12 @@ class Parent:
 class First:
     isSecond = 0
 
+    def __init__(self, index=0, num=None):
+        super().__init__(num)
+        if index != 0:
+            raise AttributeError
+        type(self).isSecond = 0
+
     def isFirst(self):
         return 1
 
